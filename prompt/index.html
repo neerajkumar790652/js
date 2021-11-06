@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <style>
+        body{
+            background-color: rgb(114, 100, 82);
+
+        }
+        
+        h1{
+            text-align:center;
+            text-shadow: 0px 0px 20px grey;
+            color:rgb(61, 28, 28)
+        }
+        button{
+                width:150px;
+                height:50px;
+                margin-left:590px;
+                background-color: rgb(46, 58, 80);
+                color: whitesmoke;
+                font-size: x-large;
+        }
+        button:hover{
+            background-color: rgb(51, 63, 28);
+            border:1px solid black;
+            box-shadow: 10px 10px 20px rgb(58, 35, 35);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>click me </h1>
+    <h1 id="demo"></h1>
+    <button onclick="myFunction()">click me</button>
+    <script>
+        function myFunction(){
+            var name= prompt("enter your name","neeraj");
+            document.getElementById('demo').innerText="Hello i am neeraj and you" +" "+ name;
+
+        }
+    </script>
+    
+</body>
+</html>
