@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  
+        
+        <h1>Cylinder</h1>
+        
+           
+            <div class='content'>
+                <input type="number" id="r" placeholder=" Radius"><br>
+                <input type="number" id="h" placeholder=" Height"><br>
+                <input id='vol' placeholder="Result" disabled><br>
+                <button onclick="cylinderVolume();">Calculate Volume</button>
+                <button onclick="cylinderSurfaceArea();">Calculate Surface area</button>
+          
+        </div>
+        <h1>Power</h1>
+       
+    
+            <div class='content'>
+                <input id="c" placeholder=" Enter current " type="number">
+                <input id="v" placeholder=" Enter voltage" type="number">
+                <input id='p' placeholder="Calculated Power" disabled>
+                <button onclick="powerFunction();"> power</button>
+                </div>
+       
+        <h1>Paints Required</h1>
+        
+        <div class="content">
+           
+                <input type="number" id='a' placeholder="Area of brick">
+                <input type="number" id="w1" placeholder="Enter the width of wall">
+                <input type="number" id="w2" placeholder="Enter the height of wall">
+                <input id="answer" placeholder="Number of bucket required" disabled>
+                <button onclick="wallFunction();"> Required bucket</button>
+            </div>
+     
+    <script src="index.js"></script>
+</body>
+</html>
