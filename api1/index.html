@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table{
+        border:1px solid black;
+        width:90%;
+        box-shadow: 0px 0px 10px black;
+        margin:10px auto;
+        
+    }
+    tr,td,th{
+        border: 1px solid black;
+    }
+    tr:nth-child(even)
+    {
+        background-color: rgb(49, 11, 11);
+        color:white
+    }
+    th{
+        background-color: rgb(13, 53, 49);
+        color:white
+    }
+    tr:hover{
+        background-color: rgb(145, 117, 112);
+        color:black;
+    }
+    h1{
+        text-align: center;
+        color:rgb(46, 8, 46);
+        text-shadow: 0px 0px 100px red;
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Item List</h1>
+    <table class="container">
+        <thead>
+            
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+            
+        </thead>
+      <tbody id="data">
+
+      </tbody>
+    </table>
+    </div>
+ <script>fetch('https://fakestoreapi.com/products').then(
+    res =>{
+        res.json().then(
+            data =>{
+                console.log(data);
+                if (data.length > 0){
+                    var temp = "";
+                    data.forEach((u)=>{
+                    temp +="<tr>";
+                    temp += "<td>"+u.id+"</td>";
+                    
+                    temp += "<td>"+u.title+"</td>";
+                    temp += "<td>"+u.price+"</td ></tr>";
+                        
+                            }
+                    )
+                    document.getElementById('data').innerHTML = temp;
+                }
+            }
+        )
+    }
+) </script>   
+</body>
+</html>
