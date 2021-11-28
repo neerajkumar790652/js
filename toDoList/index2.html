@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TO-DO-LIST</title>
+    <head>
+        <style>
+            .container{
+                width:700px;
+            /* height: 40vh; */
+            margin: 100px auto ;
+            box-shadow: 0px 0px 10px black;
+            padding: 30px;
+            text-align: center;
+            background-color: rgb(101, 83, 117);
+            }
+            h1{
+            width:700px;
+            background-color:rgb(54, 12, 12) ;
+            color:white;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px black;
+        }
+        .container input{
+            width:200px;
+            height: 27px;
+            outline:white;
+            box-shadow: 0px 0px 10px black;
+        }
+        button{
+            width:100px;
+            height: 30px;
+            background-color: rgb(54, 12, 12);
+            color:white;
+            box-shadow: 0px 0px 10px black;
+            margin:0px 20px;
+        }
+
+
+        </style>
+
+    </head>
+</head>
+<body>
+    <div class="container">
+
+        <h1>TO-DO-LIST</h1>
+        <!-- <div id="container1"></div> -->
+
+        <!-- <ul id="dynamic-list"></ul> -->
+
+    <input type="text" id="candidate" placeholder="Enter your Task">
+    <button onclick="addItem()">Create Task</button>
+    <button onclick="removeItem()">Delete Task</button>
+    <button onclick="update()">Update Task</button>
+    <ul id="dynamic-list"></ul>
+    
+    </div>
+
+   
+  <script>
+      function addItem(){
+	var ul = document.getElementById("dynamic-list");
+  var candidate = document.getElementById("candidate").value;
+  if(candidate===""){
+      alert("Please enter your task");
+      return;
+  }
+  else{
+  var li = document.createElement("li");
+  li.setAttribute('id',candidate);
+  li.appendChild(document.createTextNode(candidate));
+  ul.appendChild(li);
+  li.style.listStyleType="none";
+    li.style.fontSize="20px"
+    li.style.backgroundColor="lightblue";
+    li.style.height="30px";
+    li.style.textAlign="center";
+    li.style.paddingTop="8px";
+    li.style.boxShadow="0px 0px 10px black"
+    li.style.marginTop="10px";
+    ul.appendChild(li);
+    
+
+
+
+    // var btn1 = document.createElement("button");
+    // btn1.innerText="Edit";
+    // btn1.style.width="100px";
+    // btn1.style.height="30px";
+    // btn1.style.margin="10px";
+    // btn1.style.backgroundColor="rgb(54, 12, 12)";
+    // btn1.style.color="white";
+    // btn1.style.boxShadow="0px 0px 10px black";
+    // ul.appendChild(li);
+    // document.querySelector("li").appendChild(btn1);
+
+  }
+    
+
+}
+
+function removeItem(){
+	var ul = document.getElementById("dynamic-list");
+  var candidate = document.getElementById("candidate");
+  var item = document.getElementById(candidate.value);
+
+  ul.removeChild(item);
+}
+
+function update(){
+    var candidate = document.getElementById('candidate').value;
+    if(candidate==="")
+    
+    {
+      alert("No Task to Update");
+      return;
+  }
+  else{
+  
+    var pRef = document.createElement("p");
+    pRef.append(candidate);
+    document.querySelector(".container").appendChild(pRef);
+    pRef.style.fontSize="20px"
+    pRef.style.backgroundColor="lightgreen";
+    pRef.style.height="30px";
+    pRef.style.textAlign="center";
+    pRef.style.paddingTop="8px";
+    pRef.style.boxShadow="0px 0px 10px black";
+   
+}
+}
+
+
+   
+    
+
+        
+
+
+
+    </script>
+</body>
+</html>
