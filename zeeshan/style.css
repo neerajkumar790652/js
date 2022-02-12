@@ -1,0 +1,82 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border: 2px solid black;
+    background-color: cornflowerblue;
+   
+
+}
+.logo img{
+    width:214px;
+    height: 76px;
+    margin: 20px;
+}
+.searchBar input{
+    margin-right:20px;
+}
+
+.navBar{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:7vw;
+    border: 2px solid black;
+    margin-top: 10px;
+}
+.navBar a{
+    text-decoration: none;
+    color:black;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+.mainBody{
+    display: flex;
+    justify-content:flex-start;
+ 
+}
+.aSideBar{
+    width:260px;
+    border:2px solid black;
+    margin:10px 3px;
+}
+.aSideBar ul li {
+    list-style-type: none;
+    padding:5px;
+    font-weight: bolder;
+   
+}
+.mainImage{
+    border:2px solid black;
+  
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:2vw;
+    flex-wrap: wrap;
+    margin:11px 7px 10px 20px;
+    padding:10px;
+
+
+}
+.mainImage img{
+    width:200px;
+    height:170px;
+    padding:13px;
+}
+.right-Aside{
+    width:260px;
+    border:2px solid black;
+    margin:10px 0px 10px 15px;
+}
+.right-Aside ul li{
+    list-style-type: none;
+    padding:10px;
+    font-weight: bolder;
+}
+.footer{
+    border: 2px solid black;
+    padding:10px;
+    margin:5px;
+}
